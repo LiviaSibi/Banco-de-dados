@@ -41,5 +41,8 @@ WHERE ID_Artista = 1;
 DELETE FROM EstilosMusicas
 WHERE ID_EstiloMusical = 4;
 
+--Apaga todos os dados da tabela
+TRUNCATE TABLE Artistas;
+
 SELECT * FROM EstilosMusicas;
 SELECT * FROM Artistas;
