@@ -33,12 +33,6 @@ CREATE TABLE Albuns (
 	Estilo			INT FOREIGN KEY REFERENCES EStilos (ID_Estilo)
 );
 
-SELECT * FROM TiposUsuario;
-SELECT * FROM Artistas;
-SELECT * FROM Estilos;
-SELECT * FROM Usuarios;
-SELECT * FROM Albuns;
-
 INSERT INTO TiposUsuario (Tipo)
 VALUES ('Adm'),
 	   ('Comum');
@@ -70,3 +64,53 @@ VALUES  ('Blurryface', '17/05/2015', 53, 200, 1, 1),
 		('Continuum', '12/09/2006', 50, 200, 3, 3),
 		('Inside In/ Inside Out', '23/01/2003', 50, 200, 4, 4),
 		('Live 2012', '12/06/2012', 53, 200, 5, 5);
+
+UPDATE Artistas
+SET Nome = 'BMTH'
+WHERE ID_Artista = 2;
+
+UPDATE Usuarios
+SET TipoUsuario = 1
+WHERE ID_Usuario = 2;
+
+UPDATE Albuns
+SET Vizualizacao = 300
+WHERE ID_Album = 1;
+
+DELETE FROM Albuns
+WHERE ID_Album = 4;
+
+DELETE FROM Albuns
+WHERE ID_Album IN (3, 5)
+
+UPDATE Usuarios
+SET TipoUsuario = 1
+WHERE ID_Usuario IN (3, 4);
+
+--DQL - Linguagem de consulta de dados
+
+--Select tudo (*)
+SELECT * FROM TiposUsuario;
+SELECT * FROM Artistas;
+SELECT * FROM Estilos;
+SELECT * FROM Usuarios;
+SELECT * FROM Albuns;
+
+--Select especifico
+SELECT Nome FROM Usuarios;
+
+--Pode se usar < > =
+SELECT * FROM Usuarios WHERE TipoUsuario = 1;
+
+--OR ou AND (para ver se tem campo vazio nesse caso) 
+SELECT Album, Artista 
+FROM Albuns
+WHERE (DataLancamento IS NULL) OR (QtdMinutos IS NULL);
+
+--Filtro de texto
+SELECT ID_Artista, Nome 
+FROM Artistas
+WHERE Nome LIKE 'BMTH%'; -- AAA% -> palavra no começo da frase
+						 -- %AAA -> palavra no final da frase
+						 -- %AAA% -> palavra no meio da frase
+						 -- AAA -> palavra em qualquer lugar da frase
