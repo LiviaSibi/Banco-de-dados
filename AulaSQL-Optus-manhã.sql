@@ -87,30 +87,24 @@ UPDATE Usuarios
 SET TipoUsuario = 1
 WHERE ID_Usuario IN (3, 4);
 
---DQL - Linguagem de consulta de dados
-
---Select tudo (*)
 SELECT * FROM TiposUsuario;
 SELECT * FROM Artistas;
 SELECT * FROM Estilos;
 SELECT * FROM Usuarios;
 SELECT * FROM Albuns;
 
---Select especifico
-SELECT Nome FROM Usuarios;
+SELECT Artista, Album 
+FROM Albuns 
+WHERE Artista = 1;
 
---Pode se usar < > =
-SELECT * FROM Usuarios WHERE TipoUsuario = 1;
+SELECT Album, DataLancamento 
+FROM Albuns 
+WHERE DataLancamento = '17/05/2015';
 
---OR ou AND (para ver se tem campo vazio nesse caso) 
-SELECT Album, Artista 
-FROM Albuns
-WHERE (DataLancamento IS NULL) OR (QtdMinutos IS NULL);
+SELECT Artista,Estilo 
+FROM Albuns 
+WHERE Estilo = 2;
 
---Filtro de texto
-SELECT ID_Artista, Nome 
-FROM Artistas
-WHERE Nome LIKE 'BMTH%'; -- AAA% -> palavra no começo da frase
-						 -- %AAA -> palavra no final da frase
-						 -- %AAA% -> palavra no meio da frase
-						 -- AAA -> palavra em qualquer lugar da frase
+SELECT Artista, Album, DataLancamento 
+FROM Albuns 
+Order by DataLancamento DESC; 
