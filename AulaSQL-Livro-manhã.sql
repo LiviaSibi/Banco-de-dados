@@ -77,3 +77,15 @@ WHERE	ID_Livro = 2;
 SELECT * FROM Autores;
 SELECT * FROM Genero;
 SELECT * FROM Livros;
+
+SELECT Nome_Autor FROM Autores;
+
+SELECT Nome FROM Genero;
+
+SELECT Titulo FROM Livros;
+
+SELECT Titulo, Autor FROM Livros;
+
+SELECT Titulo, Genero FROM Livros;
+
+SELECT Titulo, Autor, Genero FROM Livros;
