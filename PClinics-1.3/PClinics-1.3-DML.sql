@@ -19,3 +19,7 @@ VALUES  ('Pablo', 123, 1);
 INSERT INTO PETs (Nome, Telefone, Dono, Raca)
 VALUES  ('Lua', 9999-9999, 1, 2),
 		('Jefferson', 9999-9999, 2, 2);
+
+INSERT INTO Atendimentos (DataConsulta, Descricao, Veterinario, PET)
+VALUES	('27/01/2020', 'Tudo em ordem', 1, 2),
+		('28/01/2020', 'Doença grave detectada', 1, 2);
