@@ -93,18 +93,30 @@ SELECT * FROM Estilos;
 SELECT * FROM Usuarios;
 SELECT * FROM Albuns;
 
-SELECT Artista, Album 
-FROM Albuns 
+SELECT * FROM Albuns 
 WHERE Artista = 1;
 
-SELECT Album, DataLancamento 
-FROM Albuns 
+-- Juntar tabelas (INNER JOIN)
+SELECT * FROM Artistas --a tabela colocada nessa linha aparece primeiro (antes da outra)
+INNER JOIN Albuns ON Artistas.ID_Artista = Albuns.Artista
+WHERE Albuns.Artista = 2; --colocar o nome da tabela, ponto e depois a coluna se houver ambiguidade entre nomes
+
+SELECT * FROM Albuns 
 WHERE DataLancamento = '17/05/2015';
 
-SELECT Artista,Estilo 
-FROM Albuns 
+SELECT Artista, Estilo FROM Albuns 
 WHERE Estilo = 2;
 
-SELECT Artista, Album, DataLancamento 
-FROM Albuns 
-Order by DataLancamento DESC; 
+-- INNER JOIN com 3 tabelas
+SELECT Artistas.Nome, Estilos.Estilo FROM  Albuns
+INNER JOIN Artistas ON Albuns.Artista = Artistas.ID_Artista 
+INNER JOIN Estilos ON Albuns.Estilo = Estilos.ID_Estilo
+WHERE Albuns.Estilo = 1;
+
+SELECT * FROM Albuns 
+ORDER BY DataLancamento DESC;
+
+-- Juntar tabelas (INNER JOIN)
+SELECT * FROM  Albuns
+INNER JOIN  Artistas ON Albuns.Artista = Artistas.ID_Artista
+ORDER BY DataLancamento DESC;
