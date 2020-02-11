@@ -1,0 +1,32 @@
+==Resumo  
+ 
+-Objetivos 
+	O objetivo do projeto é desenvolver um sistema web/mobile 
+integrado que torne a gestão da clínica automatizada e torne o acesso 
+as informações dos pacientes de fácil acesso. 
+
+==Modelagem de Software 
+	Os modelos de banco são usados para descrever, mais 
+detalhadamente, a estrutura de um banco de dados, mostrando suas 
+características e comportamentos. Os modelos também são baseados em 
+três níveis: conceitual,  lógico e físico. 
+
+-Modelo Lógico 
+Descreve como os dados serão armazenados no banco e também seus 
+relacionamentos. 
+(*IMAGEM*) 
+
+-Modelo Físico 
+Descreve como será feita a armazenagem no banco e como ele ficará. 
+(*IMAGEM*) 
+
+-Modelo Conceitual 
+É o modelo mais próximo da realidade dos usuários. Desenvolvido a 
+partir dos requisitos necessários para chegar no projeto final. 
+(*IMAGEM*) 
+
+==Cronograma
+https://trello.com/b/BSK5c8zc/sp-medical-group
+
+Dia 1 - lógico e conceitual
+Dia 2 - lógico e físico
