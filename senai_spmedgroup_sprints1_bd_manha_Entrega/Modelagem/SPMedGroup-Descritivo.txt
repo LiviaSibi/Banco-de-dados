@@ -1,0 +1,53 @@
+Descritivo
+
+==Clínica (*)
+-ID_Clinica (INT)
+-NomeFantasia (VARHAR)
+-RazãoSocial (VARCHAR)
+-Endereco (VARCHAR) ->Normalização
+-HorarioFuncionamento (Time)
+-CNPJ (CHAR 14)
+
+==Médico
+-ID_Medico (INT)
+-Nome (VARCHAR)
+-CRM (CHAR 8)
+-ID_Especialização (INT)
+-ID_Usuario(INT)
+-ID_Clinica (INT)
+
+==Consulta
+-ID_Consulta (INT)
+-ID_Medico (INT)
+-ID_Prontuario (INT)
+-DataConsulta (DATETIME)
+-Descricao (VARCHAR)
+-ID_Situacao (INT)
+
+==Prontuário
+-ID_Prontuario (INT)
+-Nome (VARCHAR)
+-RG (CHAR 8)
+-CPF (CHAR 11)
+-Endereco (VARCHAR)
+-DataNascimento (DATE)
+-Telefone (CHAR 11)
+-ID_Usuario (INT)
+
+==Usuario
+-ID_Usuario
+-Email
+-Senha
+-ID_TipoUsuario
+
+==TipoUsuario (*)
+-ID_TipoUsuario (INT)
+-Tipo (VARCHAR)
+
+==Especializacao (*)
+-ID_Especializacao (INT)
+-Titulo (VARCHAR)
+
+==Situação (*)
+-ID_Situacao (INT)
+-Titulo (VARCHAR)
